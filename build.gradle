@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.anthhyo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.reflections:reflections:0.10.2'
+    implementation 'net.dv8tion:JDA:5.0.0-beta.6'
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.1'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.6'
+    implementation 'org.ehcache:ehcache:3.10.6'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'org.javalite:activejdbc:2.6-j8'
+    implementation "org.apache.commons:commons-lang3:3.14.0"
+    implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
